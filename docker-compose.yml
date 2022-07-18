@@ -1,0 +1,17 @@
+services:
+  registration-service:
+    environment:
+      - SPRING_PROFILE=dev
+      - SERVER_PORT=8080
+      - H2DB_PASSWORD=
+      - H2DB_USERNAME=sa
+      - MESSAGE_EXCEPTION_EMAIL_EXIST=Email already exists
+      - MESSAGE_EXCEPTION_ILLEGAL_SALARY=Minimum salary for new member is 15,000
+      - MESSAGE_SUCCESSFUL=Successful
+    container_name: registration-service
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: registration-service:latest
+    ports:
+      - "8080:8080"
