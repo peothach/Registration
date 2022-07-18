@@ -54,3 +54,7 @@ docker-compose up -d
 
 #### 8. Testing with Postman
 -  I have attached postman file. You can import and testing with API for Mobile Developer Test Collection.
+
+#### 9. Recommendation
+- We can leverage docker to scale up and down by using containerized application.
+- To easily change logic, we can apply rule engine.
