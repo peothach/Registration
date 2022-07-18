@@ -4,6 +4,7 @@ import com.registration.converter.UserTypeConverter;
 import com.registration.enums.UserType;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "user")
@@ -23,15 +24,27 @@ public class UserEntity {
     @Column(name = "user_type", nullable = false, length = 255)
     private UserType userType;
 
+    @Column(name = "create_at", nullable = false, length = 255)
+    private LocalDate createAt;
+
     public UserEntity() {
     }
 
-    public UserEntity(Long id, String email, String password, double salary, UserType userType) {
+    public LocalDate getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(LocalDate createAt) {
+        this.createAt = createAt;
+    }
+
+    public UserEntity(Long id, String email, String password, double salary, UserType userType, LocalDate createAt) {
         this.id = id;
         this.email = email;
         this.password = password;
         this.salary = salary;
         this.userType = userType;
+        this.createAt = createAt;
     }
 
     public UserType getUserType() {

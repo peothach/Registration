@@ -1,6 +1,6 @@
 package com.registration.api;
 
-import com.registration.dto.request.UserRequestDto;
+import com.registration.dto.request.UserRequestDTO;
 import com.registration.dto.response.BaseResponseDto;
 import com.registration.dto.response.UserResponseDTO;
 import com.registration.service.UserService;
@@ -23,25 +23,13 @@ public class RegistrationController {
     }
 
     @PostMapping(value = "/registration", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<BaseResponseDto<UserResponseDTO>> registerUser(@RequestBody UserRequestDto userRequestDto) {
+    public ResponseEntity<BaseResponseDto<UserResponseDTO>> registerUser(@RequestBody UserRequestDTO userRequestDto) {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(new BaseResponseDto<UserResponseDTO>(
                         HttpStatus.CREATED.value(),
                         successMessage,
                         userService.save(userRequestDto))
-                );
-    }
-
-    @GetMapping(value = "/create-record", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<BaseResponseDto<UserResponseDTO>> createUser() {
-        userService.saveMillionRecord();
-        return ResponseEntity
-                .status(HttpStatus.CREATED)
-                .body(new BaseResponseDto<UserResponseDTO>(
-                        HttpStatus.CREATED.value(),
-                        successMessage,
-                        null)
                 );
     }
 }

@@ -1,7 +1,7 @@
 package com.registration.enums;
 
 public enum UserType {
-    SILVER("Silver"), GOLD("Gold"), PLATINUM("Platinum"), DEFAULT("Default");
+    SILVER("Silver"), GOLD("Gold"), PLATINUM("Platinum");
     private final String value;
     UserType(String value) {
         this.value = value;

@@ -38,12 +38,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.modelmapper</groupId>
-            <artifactId>modelmapper</artifactId>
-            <version>2.3.0</version>
-        </dependency>
-
-        <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>2.9.2</version>
@@ -72,8 +66,8 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${project.parent.version}</version>
             </plugin>
-
             <!--Check style-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -87,7 +81,6 @@
                     <linkXRef>false</linkXRef>
                     <violationSeverity>warning</violationSeverity>
                 </configuration>
-
                 <!-- Execute when run mvn clean install -->
 <!--                <executions>-->
 <!--                    <execution>-->
@@ -96,9 +89,7 @@
 <!--                        </goals>-->
 <!--                    </execution>-->
 <!--                </executions>-->
-
             </plugin>
-
             <!-- Test Coverage Jacoco -->
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -118,15 +109,13 @@
                     </rules>
                     <excludes>
                         <exclude>com/registration/entity/**</exclude>
-                        <exclude>com/registration/api/**</exclude>
+                        <exclude>com/registration/dto/**</exclude>
                         <exclude>com/registration/enums/**</exclude>
+                        <exclude>com/registration/configuration/**</exclude>
+                        <exclude>com/registration/api/**</exclude>
                         <exclude>com/registration/exception/**</exclude>
-                        <exclude>com/registration/repository/**</exclude>
                         <exclude>com/registration/ruleengine/**</exclude>
                         <exclude>com/registration/service/**</exclude>
-                        <exclude>com/registration/configuration/**</exclude>
-                        <exclude>com/registration/converter/**</exclude>
-                        <exclude>com/registration/dto/**</exclude>
                         <exclude>com/registration/RegistrationApplication.*</exclude>
                     </excludes>
                 </configuration>
@@ -145,8 +134,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
-
 </project>

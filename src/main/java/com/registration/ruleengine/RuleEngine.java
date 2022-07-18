@@ -8,13 +8,13 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public class RuleEngine {
+    private RuleEngine() {}
 
     public static Map<UserType, Rule<UserType>> createRules(double salary) {
         EnumMap<UserType, Rule<UserType>> rules = new EnumMap<>(UserType.class);
         rules.put(UserType.SILVER, createRuleForUserSilver(salary));
         rules.put(UserType.GOLD, createRuleForUserGold(salary));
         rules.put(UserType.PLATINUM, createRuleForUserPlatinum(salary));
-        rules.put(UserType.DEFAULT, createRuleForUserDefault(salary));
         return rules;
     }
 
@@ -40,13 +40,6 @@ public class RuleEngine {
         return createRule(
                 () -> salary > 50000,
                 () -> UserType.PLATINUM
-        );
-    }
-
-    private static Rule<UserType> createRuleForUserDefault(double salary) {
-        return createRule(
-                () -> salary < 15000,
-                () -> UserType.DEFAULT
         );
     }
 }

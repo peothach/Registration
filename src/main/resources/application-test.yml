@@ -2,7 +2,7 @@ server:
   port: ${SERVER_PORT:8080}
 
 spring:
-  profiles: dev
+  profiles: test
   application:
     name: registration
   datasource:
@@ -11,7 +11,7 @@ spring:
     username: ${H2DB_USERNAME:sa}
     driverClassName: org.h2.Driver
   flyway:
-    enabled: true
+    enabled: false
 
   mvc:
     pathmatch:
@@ -27,7 +27,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create-drop
     properties:
       hibernate:
         format_sql: true

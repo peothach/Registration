@@ -1,6 +1,7 @@
 package com.registration.converter;
 
 import com.registration.enums.UserType;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

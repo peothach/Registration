@@ -1,6 +1,6 @@
 package com.registration.dto.request;
 
-public class UserRequestDto {
+public class UserRequestDTO {
 
     private String email;
     private String password;
@@ -15,10 +15,10 @@ public class UserRequestDto {
                 '}';
     }
 
-    public UserRequestDto() {
+    public UserRequestDTO() {
     }
 
-    public UserRequestDto(String email, String password, double salary) {
+    public UserRequestDTO(String email, String password, double salary) {
         this.email = email;
         this.password = password;
         this.salary = salary;
