@@ -4,10 +4,10 @@ This application provide Registration User Services.
 
 ------------
 #### 1. Design approach
-![](https://github.com/peothach/Digit-Backend/blob/main/image/rabbitmq.png)
+![](https://github.com/peothach/Registration/blob/main/image/Design-Approach.png)
 
 #### 2. Workflow Diagram
-![](https://github.com/peothach/Digit-Backend/blob/main/image/rabbitmq.png)
+![](https://github.com/peothach/Registration/blob/main/image/Workflow-Diagram.png)
 
 #### 3.  Requirements
 - Java - 11.
@@ -38,10 +38,10 @@ docker-compose up -d
 ------------
 #### 5. Local development
 -  In memory H2 database: http://localhost:8080/h2 (JDBC URL: jdbc:h2:mem:h2db, User Name: sa)
-![](https://github.com/peothach/Digit-Backend/blob/main/image/rabbitmq.png)
+![](https://github.com/peothach/Registration/blob/main/image/H2-DB.png)
 
 - Swagger UI: http://localhost:8080/swagger-ui.html
-![](https://github.com/peothach/Digit-Backend/blob/main/image/rabbitmq.png)
+![](https://github.com/peothach/Registration/blob/main/image/Swagger.png)
 
 #### 6. Public API
 
@@ -53,4 +53,4 @@ docker-compose up -d
 - Checkstyle: mvn checkstyle:check
 
 #### 8. Testing with Postman
--  I have attached postman file. You can import and testing with Registration Collection.
+-  I have attached postman file. You can import and testing with API for Mobile Developer Test Collection.
