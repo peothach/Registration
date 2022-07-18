@@ -53,4 +53,4 @@ docker-compose up -d
 - Checkstyle: mvn checkstyle:check
 
 #### 8. Testing with Postman
--  I have attached postman file. You can import and testing with Registration Collection.
+-  I have attached postman file. You can import and testing with API for Mobile Developer Test Collection.
