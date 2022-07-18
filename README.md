@@ -1,1 +1,56 @@
-# Registration
+# API for Mobile Developer Test
+
+This application provide Registration User Services.
+
+------------
+#### 1. Design approach
+![](https://github.com/peothach/Digit-Backend/blob/main/image/rabbitmq.png)
+
+#### 2. Workflow Diagram
+![](https://github.com/peothach/Digit-Backend/blob/main/image/rabbitmq.png)
+
+#### 3.  Requirements
+- Java - 11.
+- Maven - 3.x.x.
+- Cockroach for dev, staging, prod environment.
+- H2 for local environment.
+- Docker.
+- Swagger UI.
+
+------------
+
+
+#### 4. Steps to setup
+- Build and run the application using docker
+
+```bash
+docker-compose up -d
+```
+
+> **Notes: If you are using Linux and facing a problem seem likes  /bin/sh: ./mvnw: Permission denied**
+
+***To do resolved that:***
+
+    chmod +x mvnw
+
+> ***Run again: docker-compose up -d***
+
+------------
+#### 5. Local development
+-  In memory H2 database: http://localhost:8080/h2 (JDBC URL: jdbc:h2:mem:h2db, User Name: sa)
+![](https://github.com/peothach/Digit-Backend/blob/main/image/rabbitmq.png)
+
+- Swagger UI: http://localhost:8080/swagger-ui.html
+![](https://github.com/peothach/Digit-Backend/blob/main/image/rabbitmq.png)
+
+#### 6. Public API
+
+- http://localhost:8080/api/v1/registration
+
+#### 7. Check test coverage and checkstyle
+- Build project: mvn clean install
+- Test coverage verification: mvn jacoco:check. Detail test coverage at least 70%, please go to folder {current_source_folder}/target/site/jacoco/index.html
+- Checkstyle: mvn checkstyle:check
+
+#### 8. Testing with Postman
+-  I have attached postman file. You can import and testing with Registration Collection.
