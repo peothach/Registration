@@ -1,3 +1,3 @@
-INSERT INTO USER VALUES (1, '2022-07-18', 'John@gmail.com', 'password', 20000, 'Silver');
-INSERT INTO USER VALUES (2, '2022-07-18', 'Mary@gmail.com', 'password', 35000, 'Gold');
-INSERT INTO USER VALUES (3, '2022-07-18', 'Baby@gmail.com', 'password', 70000, 'Platinum');
+INSERT INTO USER VALUES (1, '2022-07-18', 'John@gmail.com', '$2a$05$fj9RkH2O2.tioIVptuimTuAWrMz7lEAGnhwMtXSpoGuJUWkw/pKzS', 20000, 'Silver');
+INSERT INTO USER VALUES (2, '2022-07-18', 'Mary@gmail.com', '$2a$05$fj9RkH2O2.tioIVptuimTuAWrMz7lEAGnhwMtXSpoGuJUWkw/pKzS', 35000, 'Gold');
+INSERT INTO USER VALUES (3, '2022-07-18', 'Baby@gmail.com', '$2a$05$fj9RkH2O2.tioIVptuimTuAWrMz7lEAGnhwMtXSpoGuJUWkw/pKzS', 70000, 'Platinum');

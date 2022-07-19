@@ -15,29 +15,20 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @ActiveProfiles(profiles = "test")
 class UserTypeConverterTest {
 
-    @InjectMocks
-    private UserTypeConverter userTypeConverter;
+  @InjectMocks
+  private UserTypeConverter userTypeConverter;
 
-    @Test
-    void test_ConvertToDatabaseColumn() {
-        assertThat(UserType.SILVER.getValue())
-                .isEqualTo(userTypeConverter.convertToDatabaseColumn(UserType.SILVER));
-        assertThat(UserType.GOLD.getValue())
-                .isEqualTo(userTypeConverter.convertToDatabaseColumn(UserType.GOLD));
-        assertThat(UserType.PLATINUM.getValue())
-                .isEqualTo(userTypeConverter.convertToDatabaseColumn(UserType.PLATINUM));
-    }
+  @Test
+  void test_ConvertToDatabaseColumn() {
+    assertThat(UserType.SILVER.getValue()).isEqualTo(userTypeConverter.convertToDatabaseColumn(UserType.SILVER));
+    assertThat(UserType.GOLD.getValue()).isEqualTo(userTypeConverter.convertToDatabaseColumn(UserType.GOLD));
+    assertThat(UserType.PLATINUM.getValue()).isEqualTo(userTypeConverter.convertToDatabaseColumn(UserType.PLATINUM));
+  }
 
-    @Test
-    void test_ConvertToEntityAttribute() {
-        assertThat(UserType.SILVER)
-                .usingRecursiveComparison()
-                .isEqualTo(userTypeConverter.convertToEntityAttribute(UserType.SILVER.getValue()));
-        assertThat(UserType.GOLD)
-                .usingRecursiveComparison()
-                .isEqualTo(userTypeConverter.convertToEntityAttribute(UserType.GOLD.getValue()));
-        assertThat(UserType.PLATINUM)
-                .usingRecursiveComparison()
-                .isEqualTo(userTypeConverter.convertToEntityAttribute(UserType.PLATINUM.getValue()));
-    }
+  @Test
+  void test_ConvertToEntityAttribute() {
+    assertThat(UserType.SILVER).usingRecursiveComparison().isEqualTo(userTypeConverter.convertToEntityAttribute(UserType.SILVER.getValue()));
+    assertThat(UserType.GOLD).usingRecursiveComparison().isEqualTo(userTypeConverter.convertToEntityAttribute(UserType.GOLD.getValue()));
+    assertThat(UserType.PLATINUM).usingRecursiveComparison().isEqualTo(userTypeConverter.convertToEntityAttribute(UserType.PLATINUM.getValue()));
+  }
 }

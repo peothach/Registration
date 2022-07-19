@@ -1,8 +1,8 @@
 package com.registration.service;
 
-import com.registration.dto.request.UserRequestDTO;
-import com.registration.dto.response.UserResponseDTO;
+import com.registration.dto.request.UserRequestDto;
+import com.registration.dto.response.UserResponseDto;
 
 public interface UserService {
-    UserResponseDTO save(UserRequestDTO userRequestDto);
+  UserResponseDto save(UserRequestDto userRequestDto);
 }

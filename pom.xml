@@ -55,8 +55,25 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+            <version>3.1.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>3.8.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -110,12 +127,9 @@
                     <excludes>
                         <exclude>com/registration/entity/**</exclude>
                         <exclude>com/registration/dto/**</exclude>
-                        <exclude>com/registration/enums/**</exclude>
                         <exclude>com/registration/configuration/**</exclude>
-                        <exclude>com/registration/api/**</exclude>
                         <exclude>com/registration/exception/**</exclude>
                         <exclude>com/registration/ruleengine/**</exclude>
-                        <exclude>com/registration/service/**</exclude>
                         <exclude>com/registration/RegistrationApplication.*</exclude>
                     </excludes>
                 </configuration>

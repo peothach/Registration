@@ -42,5 +42,6 @@ message:
   exception:
     email-already-exists: ${MESSAGE_EXCEPTION_EMAIL_EXIST:Email already exists}
     illegal-salary: ${MESSAGE_EXCEPTION_ILLEGAL_SALARY:Minimum salary for new member is 15,000}
+    illegal-email: ${MESSAGE_EXCEPTION_ILLEGAL_EMAIL:Email is not valid}
   success: ${MESSAGE_SUCCESSFUL:Successful}
 

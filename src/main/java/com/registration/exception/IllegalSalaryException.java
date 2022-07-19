@@ -1,8 +1,8 @@
 package com.registration.exception;
 
-public class IllegalSalaryException extends RuntimeException{
+public class IllegalSalaryException extends RuntimeException {
 
-    public IllegalSalaryException(String message) {
-        super(message);
-    }
+  public IllegalSalaryException(String message) {
+    super(message);
+  }
 }
