@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class ValidationUtils {
 
-  public static Pattern VALID_EMAIL_ADDRESS_REGEX =
+  public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
           Pattern.compile("^[A-Z\\d._%+-]+@[A-Z\\d.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 
   private ValidationUtils() {
