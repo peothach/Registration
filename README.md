@@ -58,3 +58,7 @@ docker-compose up -d
 #### 9. Recommendation
 - We can leverage docker to scale up and down by using containerized application.
 - To easily change logic, we can apply rule engine.
+
+#### 10.  Test Driven Development
+![](https://github.com/peothach/Registration/blob/main/image/TDD_1.png)
+![](https://github.com/peothach/Registration/blob/main/image/TDD_2.png)
