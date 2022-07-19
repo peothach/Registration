@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class GlobalHandlerException {
+public class GlobalExceptionHandler {
 
   @ExceptionHandler(value = {
       EmailAlreadyExistsException.class,
@@ -18,10 +18,10 @@ public class GlobalHandlerException {
   public final ResponseEntity<BaseResponseDto<UserResponseDto>> handleEmailAlreadyExistException(Exception exception) {
     return ResponseEntity
             .status(HttpStatus.BAD_REQUEST)
-            .body(new BaseResponseDto<UserResponseDto>(
-                    HttpStatus.BAD_REQUEST.value(),
-                    exception.getMessage(),
-                    null)
+            .body(new BaseResponseDto<>(
+                HttpStatus.BAD_REQUEST.value(),
+                exception.getMessage(),
+                null)
             );
   }
 }
