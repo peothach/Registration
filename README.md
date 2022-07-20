@@ -7,12 +7,11 @@ This application provide Registration User Services.
 ![](https://github.com/peothach/Registration/blob/main/image/Design-Approach.png)
 
 #### 2. Workflow Diagram
-![](https://github.com/peothach/Registration/blob/main/image/Workflow-Diagram.png)
+![](https://github.com/peothach/Registration/blob/main/image/Workflow-Diagram_1.png)
 
 #### 3.  Requirements
 - Java - 11.
 - Maven - 3.x.x.
-- Cockroach for dev, staging, prod environment.
 - H2 for local environment.
 - Docker.
 - Swagger UI.
